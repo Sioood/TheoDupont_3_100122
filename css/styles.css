@@ -6,11 +6,16 @@
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   text-decoration: none;
+  scroll-behavior: smooth;
   font-family: "Roboto", sans-serif;
 }
 
-a {
-  color: black;
+h1 {
+  font-size: 20px;
+}
+
+h2 {
+  font-size: 20px;
 }
 
 .nav {
@@ -22,9 +27,9 @@ a {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: left;
+      -ms-flex-align: left;
+          align-items: left;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -49,12 +54,12 @@ a {
 }
 
 .nav__logo img {
-  width: 100%;
+  width: auto;
   height: 25px;
 }
 
 .nav__loc {
-  padding: 4%;
+  padding: 15px;
   width: 100%;
   height: 100%;
   display: -webkit-box;
@@ -67,10 +72,23 @@ a {
       -ms-flex-pack: center;
           justify-content: center;
   background: #eaeaea;
+  color: #353535;
+}
+
+.info {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .presentation {
-  padding: 30px 10% 50px 10%;
+  padding: 30px 0 50px 0;
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -90,28 +108,31 @@ a {
 }
 
 .presentation h1 {
-  padding: 0 10% 0 10%;
-  font-size: 20px;
+  padding: 0 15% 0 15%;
   font-weight: 1500;
 }
 
 .presentation h2 {
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 300;
 }
 
 .presentation__cta {
+  margin: 7px 0 0 0;
   padding: 12px 16px 12px 16px;
+  font-size: 14px;
   background: linear-gradient(-10deg, #9356dc, #ff79da);
   color: white;
   border: none;
   border-radius: 100px;
   -webkit-box-shadow: 0px 5px 15px -8px #353535;
           box-shadow: 0px 5px 15px -8px #353535;
+  cursor: pointer;
 }
 
 .running {
-  padding: 0 5% 0 5%;
+  padding: 35px 0 25px 0;
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -119,13 +140,24 @@ a {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   gap: 15px;
+}
+
+.running h2 {
+  width: 90%;
 }
 
 .running__step {
   position: relative;
   margin: 0 2.5% 0 2.5%;
-  height: 50px;
+  width: 70%;
+  height: 60px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -142,15 +174,26 @@ a {
   gap: 15px;
   background: #f6f6f6;
   border-radius: 10px;
-  -webkit-box-shadow: 0px 5px 10px #eaeaea;
-          box-shadow: 0px 5px 10px #eaeaea;
+  -webkit-box-shadow: 0px 5px 15px #d9d9d9;
+          box-shadow: 0px 5px 15px #d9d9d9;
 }
 
 .running__step::before {
-  content: "";
+  content: attr(data-number);
   width: 20px;
   height: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   background: #9356dc;
+  color: white;
+  font-size: 80%;
   border-radius: 50%;
   -webkit-transform: translate(-50%);
           transform: translate(-50%);
@@ -166,11 +209,12 @@ a {
   opacity: 0;
 }
 
-.running__step:hover + .running__step::after {
+.running__step:hover::after {
   opacity: 0.3;
 }
 
 .list {
+  padding: 50px 0 50px 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -187,16 +231,40 @@ a {
   gap: 25px;
 }
 
-.list > h2, .list__card {
+.list > h2, .list__wrapper {
   width: 90%;
 }
 
+.list__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 20px;
+}
+
 .list__card {
-  height: 200px;
+  position: relative;
+  min-width: 40%;
+  height: 215px;
   overflow: hidden;
   border-radius: 15px;
   -webkit-box-shadow: 0px 5px 30px -20px #353535;
           box-shadow: 0px 5px 30px -20px #353535;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 400px;
+          flex: 1 1 400px;
 }
 
 .list__card .card__wrapper--img {
@@ -210,12 +278,57 @@ a {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-  -o-object-position: center;
-     object-position: center;
+  -o-object-position: 0 60%;
+     object-position: 0 60%;
+}
+
+.list__card__new::after {
+  content: "Nouveau";
+  position: absolute;
+  top: 4%;
+  right: 4%;
+  padding: 6px 12px 6px 12px;
+  font-size: 12px;
+  background: #99e2d0;
+  color: #00724c;
+  border-radius: 2px;
+}
+
+.list__card__info {
+  padding: 0 15px 0 15px;
+  height: 30%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.list__card__info__text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 5px;
+}
+
+.list__card__info__text__pos {
+  font-weight: 300;
 }
 
 footer {
-  padding: 5%;
+  padding: 20px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -232,14 +345,153 @@ footer {
   background: #353535;
 }
 
-footer h4 {
-  font-family: "Shrikhand", cursive;
-}
-
-footer h4, footer a {
-  color: white;
+footer ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: left;
+      -ms-flex-align: left;
+          align-items: left;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 5px;
+}
+
+footer h4 {
+  margin: 0 0 10px 0;
+  font-family: "Shrikhand", cursive;
+  font-size: 14px;
+}
+
+footer h4,
+footer a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 12px;
+  color: white;
+}
+
+footer .footer__thin {
+  font-weight: 300;
+}
+
+@media screen and (min-width: 1024px) {
+  h1 {
+    font-size: 32px;
+  }
+  h2 {
+    font-size: 32px;
+  }
+  .nav {
+    -webkit-box-align: left;
+        -ms-flex-align: left;
+            align-items: left;
+    -webkit-box-pack: left;
+        -ms-flex-pack: left;
+            justify-content: left;
+  }
+  .nav__logo {
+    padding: 2%;
+  }
+  .nav__logo img {
+    height: 50px;
+  }
+  .nav__loc {
+    font-size: 20px;
+  }
+  .info {
+    height: 60vh;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .presentation h2 {
+    font-size: 22px;
+    font-weight: 400;
+  }
+  .presentation__cta {
+    margin: 70px 0 0 0;
+    font-size: 18px;
+  }
+  .running {
+    padding: 35px 0 50px 0;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    background: #f6f6f6;
+  }
+  .running h2 {
+    width: 75%;
+  }
+  .running__step {
+    height: 75px;
+    background: white;
+  }
+  .running__step h5 {
+    font-size: 18px;
+  }
+  .running__step::before {
+    width: 30px;
+    height: 30px;
+    font-size: 90%;
+  }
+  .list__wrapper {
+    gap: 55px;
+  }
+  .list__card {
+    height: 400px;
+  }
+  .list__card__new::after {
+    font-size: 16px;
+  }
+  .list__card__info {
+    padding: 0 15px 0 25px;
+    height: 30%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .list__card__info__text {
+    font-size: 20px;
+    gap: 15px;
+  }
+  .list__card__info__text__pos {
+    font-size: 18px;
+  }
+  footer ul {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  footer ul h4 {
+    padding: 0;
+    margin: 0;
+    font-size: 22px;
+  }
+  footer ul li {
+    font-size: 16px;
+  }
 }
 /*# sourceMappingURL=styles.css.map */

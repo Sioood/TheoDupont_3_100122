@@ -36,68 +36,80 @@
     </div>
   </header>
 
-  <div class="presentation">
-    <h1>Réservez le menu qui vous convient</h1>
-    <h2>Découvrez des restaurants d'exception, séléctionnés par nos soins.</h2>
-    <button class="presentation__cta">Explorer nos restaurants</button>
+  <div class="info">
+    <div class="presentation">
+      <h1>Réservez le menu qui vous convient</h1>
+      <h2>Découvrez des restaurants d'exception, séléctionnés par nos soins.</h2>
+      <a class="presentation__cta" href="#list">Explorer nos restaurants</a>
+    </div>
+
+    <div class="running">
+      <h2>Fonctionnement</h2>
+      <div class="running__step" data-number="1">
+        <img src="" alt="">
+        <h5>Choisissez un restaurant</h5>
+      </div>
+      <div class="running__step" data-number="2">
+        <img src="" alt="">
+        <h5>Composez votre menu</h5>
+      </div>
+      <div class="running__step" data-number="3">
+        <img src="" alt="">
+        <h5>Dégustez au restaurant</h5>
+      </div>
+    </div>
   </div>
 
-  <div class="running">
-    <h2>Fonctionnement</h2>
-    <div class="running__step">
-      <img src="" alt="">
-      <h5>Choisissez un restaurant</h5>
-    </div>
-    <div class="running__step">
-      <img src="" alt="">
-      <h5>Composez votre menu</h5>
-    </div>
-    <div class="running__step">
-      <img src="" alt="">
-      <h5>Dégustez au restaurant</h5>
-    </div>
-  </div>
-
-  <div class="list">
+  <div class="list" id="list">
     <h2>Restaurants</h2>
-    <div class="list__card">
-      <div class="card__wrapper--img">
-        <img src="./assets/img/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="">
+    <div class="list__wrapper">
+      <div class="list__card list__card__new">
+        <div class="card__wrapper--img">
+          <img src="./assets/img/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="">
+        </div>
+        <div class="list__card__info">
+          <div class="list__card__info__text">
+            <h4>La palette du goût</h4>
+            <h4 class="list__card__info__text__pos">Mélimontant</h4>
+          </div>
+          <img src="" alt="">
+        </div>
       </div>
-      <div class="card__info">
-        <h4></h4>
-        <h4></h4>
-        <img src="" alt="">
+      <div class="list__card list__card__new">
+        <div class="card__wrapper--img">
+          <img src="./assets/img/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg" alt="">
+        </div>
+        <div class="list__card__info">
+          <div class="list__card__info__text">
+            <h4>La note enchantée</h4>
+            <h4 class="list__card__info__text__pos">Charonne</h4>
+          </div>
+          <img src="" alt="">
+        </div>
       </div>
-    </div>
-    <div class="list__card">
-      <div class="card__wrapper--img">
-        <img src="./assets/img/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg" alt="">
+      <div class="list__card">
+        <div class="card__wrapper--img">
+          <img src="./assets/img/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="">
+        </div>
+        <div class="list__card__info">
+          <div class="list__card__info__text">
+            <h4>À la française</h4>
+            <h4 class="list__card__info__text__pos">Cité Rouge</h4>
+          </div>
+          <img src="" alt="">
+        </div>
       </div>
-      <div class="card__info">
-        <h4></h4>
-        <h4></h4>
-        <img src="" alt="">
-      </div>
-    </div>
-    <div class="list__card">
-      <div class="card__wrapper--img">
-        <img src="./assets/img/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="">
-      </div>
-      <div class="card__info">
-        <h4></h4>
-        <h4></h4>
-        <img src="" alt="">
-      </div>
-    </div>
-    <div class="list__card">
-      <div class="card__wrapper--img">
-        <img src="./assets/img/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="">
-      </div>
-      <div class="card__info">
-        <h4></h4>
-        <h4></h4>
-        <img src="" alt="">
+      <div class="list__card">
+        <div class="card__wrapper--img">
+          <img src="./assets/img/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="">
+        </div>
+        <div class="list__card__info">
+          <div class="list__card__info__text">
+            <h4>Le délice des sens</h4>
+            <h4 class="list__card__info__text__pos">Folie-Méricourt</h4>
+          </div>
+          <img src="" alt="">
+        </div>
       </div>
     </div>
   </div>
@@ -113,14 +125,11 @@
         <img src="" alt="">
         <li>Devenir partenaire</li>
       </a>
-      <a href="">
+      <a href="" class="footer__thin">
         <li>Mentions légales</li>
       </a>
-      <a href="">
+      <a href="" class="footer__thin">
         <li>Contact</li>
-      </a>
-      <a href="">
-        <li></li>
       </a>
     </ul>
   </footer>
