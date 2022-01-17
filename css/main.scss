@@ -30,18 +30,6 @@ h2 {
   font-size: 20px;
 }
 
-.hearth {
-  width: 20px;
-  height: 20px;
-  background: center / contain no-repeat
-    url("../../assets/svg/hearth-stroke.svg");
-  cursor: pointer;
-  transition: all 0.3s ease-in-out;
-  &:hover {
-    background: center / contain no-repeat url("../../assets/svg/hearth.svg");
-  }
-}
-
 .nav {
   width: 100%;
   display: flex;
