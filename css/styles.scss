@@ -10,58 +10,6 @@ $dark-gray: #353535;
 $first-font: "Shrikhand", cursive;
 $second-font: "Roboto", sans-serif;
 
-* {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  outline: none;
-  box-sizing: border-box;
-  text-decoration: none;
-  scroll-behavior: smooth;
-  font-family: $second-font;
-  // color: $dark-gray;
-}
-
-h1 {
-  font-size: 20px;
-}
-
-h2 {
-  font-size: 20px;
-}
-
-.nav {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: left;
-  justify-content: center;
-  &__logo {
-    padding: 4%;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0px -5px 10px $dark-gray;
-    z-index: 1;
-    img {
-      width: auto;
-      height: 25px;
-    }
-  }
-  &__loc {
-    padding: 15px;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: $gray;
-    color: $dark-gray;
-  }
-}
-
 .info {
   width: 100%;
   display: flex;
@@ -145,6 +93,10 @@ h2 {
       border-radius: 10px;
       opacity: 0;
     }
+    &:hover,
+    .running__step {
+      box-shadow: 0px 5px 15px #a9a9a9;
+    }
     &:hover::after {
       opacity: 0.3;
     }
@@ -174,6 +126,7 @@ h2 {
     position: relative;
     min-width: 40%;
     height: 215px;
+    color: $dark-gray;
     overflow: hidden;
     border-radius: 15px;
     box-shadow: 0px 5px 30px -20px $dark-gray;
@@ -215,76 +168,32 @@ h2 {
           font-weight: 300;
         }
       }
+      .hearth{
+        padding: 0 30px 0 0;
+      }
     }
-  }
-}
-
-footer {
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-  align-items: left;
-  justify-content: center;
-  background: $dark-gray;
-  ul {
-    display: flex;
-    flex-direction: column;
-    align-items: left;
-    justify-content: center;
-    gap: 5px;
-  }
-  h4 {
-    margin: 0 0 10px 0;
-    font-family: $first-font;
-    font-size: 14px;
-  }
-
-  h4,
-  a {
-    display: flex;
-    font-size: 12px;
-    color: $light-color;
-  }
-  .footer__thin {
-    font-weight: 300;
   }
 }
 
 @media screen and (min-width: 1024px) {
-  h1 {
-    font-size: 32px;
-  }
-
-  h2 {
-    font-size: 32px;
-  }
-
-  .nav {
-    align-items: left;
-    justify-content: left;
-    &__logo {
-      padding: 2%;
-      img {
-        height: 50px;
-      }
-    }
-    &__loc {
-      font-size: 20px;
-    }
-  }
-
   .info {
     height: 60vh;
     flex-direction: row;
   }
 
   .presentation {
+    h1{
+      padding: 0;
+      width: 100%;
+      font-size: 32px;
+    }
     h2 {
-      font-size: 22px;
+      width: 60%;
+      font-size: 20px;
       font-weight: 400;
     }
     &__cta {
-      margin: 70px 0 0 0;
+      margin: 40px 0 0 0;
       font-size: 18px;
     }
   }
@@ -328,26 +237,10 @@ footer {
         &__text {
           font-size: 20px;
           gap: 15px;
-          &__pos{
+          &__pos {
             font-size: 18px;
           }
         }
-      }
-    }
-  }
-
-  footer {
-    ul {
-      flex-direction: row;
-      align-items: center;
-      justify-content: space-around;
-      h4{
-        padding: 0;
-        margin: 0;
-        font-size: 22px;
-      }
-      li{
-        font-size: 16px;
       }
     }
   }

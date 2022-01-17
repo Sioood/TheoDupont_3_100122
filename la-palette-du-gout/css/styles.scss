@@ -1,0 +1,176 @@
+$primary-color: #9356dc;
+$secondary-color: #ff79da;
+$third-color: #99e2d0;
+$light-color: white;
+$dark-color: black;
+$light-gray: #f6f6f6;
+$gray: #eaeaea;
+$dark-gray: #353535;
+
+$first-font: "Shrikhand", cursive;
+$second-font: "Roboto", sans-serif;
+
+.preview {
+  object-fit: cover;
+  width: 100%;
+  max-height: 450px;
+}
+
+body {
+  background: $light-gray;
+}
+
+.menu {
+  padding: 35px 4% 35px 4%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 25px;
+  background: $light-gray;
+  border-radius: 35px 35px 0 0;
+  transform: translate(0, -45px);
+  &__title {
+    margin: 0 0 35px 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    h1 {
+      font-family: $first-font;
+      font-weight: 100;
+    }
+  }
+  &__list {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    &__categorie {
+      width: 100%;
+      &__title {
+        position: relative;
+        padding: 0 0 15px 0;
+        text-transform: uppercase;
+        font-weight: 400;
+        &::after {
+          content: "";
+          position: absolute;
+          left: 0;
+          bottom: 35%;
+          width: 30px;
+          height: 1.5px;
+          background: $third-color;
+        }
+      }
+      &__cards {
+        display: flex;
+        flex-direction: column;
+        gap: 12.5px;
+        &__card {
+          padding: 0% 0% 0% 12px;
+          $card-height: 50px;
+          height: $card-height;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          gap: 10px;
+          background: $light-color;
+          border-radius: 10px;
+          box-shadow: 0px 7px 7px $gray;
+          cursor: pointer;
+          overflow: hidden;
+          .price {
+            padding: 0 0 10px 0;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: end;
+          }
+          &::after {
+            content: "";
+            background: center / contain no-repeat url("../../assets/svg/checkbox.svg") $third-color;
+            background-size: 32px 32px;
+            display: inline-block;
+            width: 0;
+            height: 100%;
+            transition: all 0.5s ease-in-out;
+          }
+          &:hover::after {
+            width: $card-height;
+          }
+
+          &__info {
+            min-width: 50%;
+            flex: 1;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            gap: 5px;
+            h5,
+            h6 {
+              white-space: nowrap;
+              text-overflow: ellipsis;
+              overflow: hidden;
+            }
+            h5 {
+              padding: 10px 0 0 0;
+              font-weight: 600;
+            }
+            h6 {
+              padding: 0 0 10px 0;
+              font-weight: 400;
+            }
+          }
+        }
+      }
+    }
+  }
+  &__cta {
+    margin: 7px 0 0 0;
+    padding: 12px 46px 12px 46px;
+    font-size: 14px;
+    background: linear-gradient(-10deg, $primary-color, $secondary-color);
+    color: white;
+    border: none;
+    border-radius: 100px;
+    box-shadow: 0px 5px 15px -8px $dark-gray;
+    cursor: pointer;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .menu {
+    h1 {
+      font-family: $first-font;
+      font-weight: 100;
+    }
+    &__list {
+      display: flex;
+      flex-direction: row;
+      gap: 40px;
+      &__categorie {
+        max-width: 30.5%;
+        &__cards {
+          &__card {
+            $card-height: 100px;
+            height: $card-height;
+            .price {
+              padding: 0 0 20px 0;
+            }
+            &:hover::after {
+              width: $card-height;
+            }
+          }
+        }
+      }
+    }
+    &__cta {
+      margin: 50px 0 0 0;
+      font-size: 18px;
+    }
+  }
+}
