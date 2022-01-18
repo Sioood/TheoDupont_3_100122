@@ -18,10 +18,9 @@ $second-font: "Roboto", sans-serif;
   cursor: pointer;
   transition: all 0.3s ease-in-out;
   &:hover {
-    background: center / contain no-repeat url("./assets/svg/hearth.svg");
+    background: center / contain no-repeat url("/assets/svg/hearth.svg");
   }
 }
-
 
 .info {
   width: 100%;

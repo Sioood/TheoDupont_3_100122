@@ -8,7 +8,7 @@
 }
 
 .hearth:hover {
-  background: center/contain no-repeat url("./assets/svg/hearth.svg");
+  background: center/contain no-repeat url("/assets/svg/hearth.svg");
 }
 
 .info {
