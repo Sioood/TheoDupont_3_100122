@@ -50,6 +50,19 @@ body {
   font-weight: 100;
 }
 
+.menu__title .hearth {
+  width: 20px;
+  height: 20px;
+  background: center/contain no-repeat url("../../assets/svg/hearth-stroke.svg");
+  cursor: pointer;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.menu__title .hearth:hover {
+  background: center/contain no-repeat url("../../assets/svg/hearth.svg");
+}
+
 .menu__list {
   width: 100%;
   display: -webkit-box;
