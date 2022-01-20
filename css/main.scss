@@ -113,18 +113,40 @@ footer {
 
 //animation appear on loading
 
-.appear__element{
-  animation: appear 1s ease-in-out;
+.appear__element {
+  $cards: 3;
+  $anim-dur: 1s;
+  $anim-delay: $anim-dur / $cards;
+
+  opacity: 0;
+  animation: appear $anim-dur ease-in-out;
+  animation-fill-mode: forwards;
+  @for $i from 1 through $cards {
+    &--#{$i} {
+      animation-delay: $anim-delay * $i;
+    }
+  }
+ 
   @keyframes appear {
-    from{
+    from {
       opacity: 0;
       transform: translate(0, 50%);
     }
 
-    to{
+    to {
       opacity: 1;
     }
   }
+}
+
+.appear__element--1 {
+  animation-delay: 0s;
+}
+.appear__element--2 {
+  animation-delay: 0.1s;
+}
+.appear__element--3 {
+  animation-delay: 0.2s;
 }
 
 @media screen and (min-width: 1024px) {
@@ -169,8 +191,21 @@ footer {
         margin: 0;
         font-size: 22px;
       }
-      li {
+      a{
+        position: relative;
         font-size: 16px;
+      }
+      a::after{
+        content: "";
+        position: absolute;
+        bottom: -30%;
+        width: 0px;
+        height: 1.5px;
+        background: $third-color;
+        transition: all 0.7s ease-in-out;
+      }
+      a:hover::after{
+        width: 30%;
       }
     }
   }

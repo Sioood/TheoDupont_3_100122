@@ -152,8 +152,26 @@ footer .footer__thin {
 }
 
 .appear__element {
+  opacity: 0;
   -webkit-animation: appear 1s ease-in-out;
           animation: appear 1s ease-in-out;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.appear__element--1 {
+  -webkit-animation-delay: 0.33333s;
+          animation-delay: 0.33333s;
+}
+
+.appear__element--2 {
+  -webkit-animation-delay: 0.66667s;
+          animation-delay: 0.66667s;
+}
+
+.appear__element--3 {
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
 }
 
 @-webkit-keyframes appear {
@@ -176,6 +194,21 @@ footer .footer__thin {
   to {
     opacity: 1;
   }
+}
+
+.appear__element--1 {
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
+}
+
+.appear__element--2 {
+  -webkit-animation-delay: 0.1s;
+          animation-delay: 0.1s;
+}
+
+.appear__element--3 {
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s;
 }
 
 @media screen and (min-width: 1024px) {
@@ -225,8 +258,22 @@ footer .footer__thin {
     margin: 0;
     font-size: 22px;
   }
-  footer ul li {
+  footer ul a {
+    position: relative;
     font-size: 16px;
+  }
+  footer ul a::after {
+    content: "";
+    position: absolute;
+    bottom: -30%;
+    width: 0px;
+    height: 1.5px;
+    background: #99e2d0;
+    -webkit-transition: all 0.7s ease-in-out;
+    transition: all 0.7s ease-in-out;
+  }
+  footer ul a:hover::after {
+    width: 30%;
   }
 }
 /*# sourceMappingURL=main.css.map */
