@@ -19,19 +19,6 @@ h2 {
   font-size: 20px;
 }
 
-.hearth {
-  width: 20px;
-  height: 20px;
-  background: center/contain no-repeat url("../../assets/svg/hearth-stroke.svg");
-  cursor: pointer;
-  -webkit-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
-}
-
-.hearth:hover {
-  background: center/contain no-repeat url("../../assets/svg/hearth.svg");
-}
-
 .nav {
   width: 100%;
   display: -webkit-box;
@@ -162,6 +149,33 @@ footer a {
 
 footer .footer__thin {
   font-weight: 300;
+}
+
+.appear__element {
+  -webkit-animation: appear 1s ease-in-out;
+          animation: appear 1s ease-in-out;
+}
+
+@-webkit-keyframes appear {
+  from {
+    opacity: 0;
+    -webkit-transform: translate(0, 50%);
+            transform: translate(0, 50%);
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes appear {
+  from {
+    opacity: 0;
+    -webkit-transform: translate(0, 50%);
+            transform: translate(0, 50%);
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 @media screen and (min-width: 1024px) {
