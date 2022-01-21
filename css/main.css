@@ -50,6 +50,8 @@ h2 {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  font-family: "Shrikhand", cursive;
+  font-size: 25px;
   -webkit-box-shadow: 0px -5px 10px #353535;
           box-shadow: 0px -5px 10px #353535;
   z-index: 1;
@@ -57,22 +59,23 @@ h2 {
 
 .nav__logo__back {
   position: absolute;
-  top: 50%;
-  left: 0;
+  left: 5%;
   width: auto;
-  height: auto;
-  -webkit-transform: translate(0, -50%);
-          transform: translate(0, -50%);
+  height: 20%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .nav__logo__back img {
-  width: 50px !important;
-  height: 15px !important;
-}
-
-.nav__logo img {
-  width: auto;
-  height: 25px;
+  width: 100%;
+  height: 100%;
 }
 
 .nav__loc {
@@ -88,8 +91,14 @@ h2 {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  gap: 10px;
   background: #eaeaea;
   color: #353535;
+}
+
+.nav__loc img {
+  width: 15px;
+  height: 15px;
 }
 
 footer {
@@ -143,12 +152,83 @@ footer a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   font-size: 12px;
+  font-weight: 500;
   color: white;
+  gap: 10px;
+}
+
+footer h4 img,
+footer a img {
+  width: auto;
+  height: 12px;
 }
 
 footer .footer__thin {
   font-weight: 300;
+}
+
+.appear__element {
+  opacity: 0;
+  -webkit-animation: appear 1s ease-in-out;
+          animation: appear 1s ease-in-out;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.appear__element--1 {
+  -webkit-animation-delay: 0.33333s;
+          animation-delay: 0.33333s;
+}
+
+.appear__element--2 {
+  -webkit-animation-delay: 0.66667s;
+          animation-delay: 0.66667s;
+}
+
+.appear__element--3 {
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+}
+
+@-webkit-keyframes appear {
+  from {
+    opacity: 0;
+    -webkit-transform: translate(0, 50%);
+            transform: translate(0, 50%);
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes appear {
+  from {
+    opacity: 0;
+    -webkit-transform: translate(0, 50%);
+            transform: translate(0, 50%);
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.appear__element--1 {
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
+}
+
+.appear__element--2 {
+  -webkit-animation-delay: 0.1s;
+          animation-delay: 0.1s;
+}
+
+.appear__element--3 {
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s;
 }
 
 @media screen and (min-width: 1024px) {
@@ -174,13 +254,20 @@ footer .footer__thin {
   }
   .nav__logo {
     padding: 2%;
+    font-size: 50px;
     background: white;
-  }
-  .nav__logo img {
-    height: 50px;
   }
   .nav__loc {
     font-size: 20px;
+  }
+  .cta {
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+  }
+  .cta:hover {
+    -webkit-transform: scale(1.02);
+            transform: scale(1.02);
+    background: linear-gradient(-15deg, #9356dc, #ff79da);
   }
   footer ul {
     -webkit-box-orient: horizontal;
@@ -198,8 +285,22 @@ footer .footer__thin {
     margin: 0;
     font-size: 22px;
   }
-  footer ul li {
+  footer ul a {
+    position: relative;
     font-size: 16px;
+  }
+  footer ul a::after {
+    content: "";
+    position: absolute;
+    bottom: -30%;
+    width: 0px;
+    height: 1.5px;
+    background: #99e2d0;
+    -webkit-transition: all 0.7s ease-in-out;
+    transition: all 0.7s ease-in-out;
+  }
+  footer ul a:hover::after {
+    width: 30%;
   }
 }
 /*# sourceMappingURL=main.css.map */

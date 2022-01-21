@@ -48,9 +48,10 @@ body {
       cursor: pointer;
       transition: all 0.3s ease-in-out;
       &:hover {
-        background: center / contain no-repeat url("../../assets/svg/hearth.svg");
+        background: center / contain no-repeat
+          url("../../assets/svg/hearth.svg");
       }
-    }    
+    }
   }
   &__list {
     width: 100%;
@@ -100,17 +101,36 @@ body {
             flex-direction: column;
             justify-content: end;
           }
-          &::after {
+
+          //animation checkbox
+
+          .popup__check {
             content: "";
-            background: center / contain no-repeat url("../../assets/svg/checkbox.svg") $third-color;
-            background-size: 32px 32px;
-            display: inline-block;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: $third-color;
             width: 0;
             height: 100%;
             transition: all 0.5s ease-in-out;
+            overflow: hidden;
+            .checkbox {
+              width: 20px;
+              height: 20px;
+            }
           }
-          &:hover::after {
+          &:hover .popup__check {
             width: $card-height;
+          }
+
+          &:hover .checkbox {
+            animation: checkbox__rotate 0.5s ease-in-out;
+          }
+
+          @keyframes checkbox__rotate {
+            to {
+              transform: rotate(360deg);
+            }
           }
 
           &__info {
@@ -149,7 +169,6 @@ body {
     border: none;
     border-radius: 100px;
     box-shadow: 0px 5px 15px -8px $dark-gray;
-    cursor: pointer;
   }
 }
 
@@ -172,7 +191,13 @@ body {
             .price {
               padding: 0 0 20px 0;
             }
-            &:hover::after {
+            .popup__check {
+              .checkbox {
+                width: 30px;
+                height: 30px;
+              }
+            }
+            &:hover .popup__check {
               width: $card-height;
             }
           }
