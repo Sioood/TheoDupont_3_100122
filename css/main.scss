@@ -45,23 +45,22 @@ h2 {
     display: flex;
     align-items: center;
     justify-content: center;
+    font-family: $first-font;
+    font-size: 25px;
     box-shadow: 0px -5px 10px $dark-gray;
     z-index: 1;
     &__back {
       position: absolute;
-      top: 50%;
-      left: 0;
+      left: 5%;
       width: auto;
-      height: auto;
-      transform: translate(0, -50%);
+      height: 20%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       img {
-        width: 50px !important;
-        height: 15px !important;
+        width: 100%;
+        height: 100%;
       }
-    }
-    img {
-      width: auto;
-      height: 25px;
     }
   }
   &__loc {
@@ -71,8 +70,13 @@ h2 {
     display: flex;
     align-items: center;
     justify-content: center;
+    gap: 10px;
     background: $gray;
     color: $dark-gray;
+    img {
+      width: 15px;
+      height: 15px;
+    }
   }
 }
 
@@ -89,6 +93,7 @@ footer {
     align-items: left;
     justify-content: center;
     gap: 5px;
+
     li {
       color: $light-color;
     }
@@ -103,8 +108,15 @@ footer {
   h4,
   a {
     display: flex;
+    align-items: center;
     font-size: 12px;
+    font-weight: 500;
     color: $light-color;
+    gap: 10px;
+    img {
+      width: auto;
+      height: 12px;
+    }
   }
   .footer__thin {
     font-weight: 300;
@@ -126,7 +138,7 @@ footer {
       animation-delay: $anim-delay * $i;
     }
   }
- 
+
   @keyframes appear {
     from {
       opacity: 0;
@@ -171,13 +183,19 @@ footer {
     justify-content: left;
     &__logo {
       padding: 2%;
+      font-size: 50px;
       background: $light-color;
-      img {
-        height: 50px;
-      }
     }
     &__loc {
       font-size: 20px;
+    }
+  }
+
+  .cta {
+    transition: all 0.2s ease-in-out;
+    &:hover {
+      transform: scale(1.02);
+      background: linear-gradient(-15deg, $primary-color, $secondary-color);
     }
   }
 
@@ -191,11 +209,11 @@ footer {
         margin: 0;
         font-size: 22px;
       }
-      a{
+      a {
         position: relative;
         font-size: 16px;
       }
-      a::after{
+      a::after {
         content: "";
         position: absolute;
         bottom: -30%;
@@ -204,7 +222,7 @@ footer {
         background: $third-color;
         transition: all 0.7s ease-in-out;
       }
-      a:hover::after{
+      a:hover::after {
         width: 30%;
       }
     }

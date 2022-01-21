@@ -127,8 +127,8 @@ body {
             animation: checkbox__rotate 0.5s ease-in-out;
           }
 
-          @keyframes checkbox__rotate{
-            to{
+          @keyframes checkbox__rotate {
+            to {
               transform: rotate(360deg);
             }
           }
@@ -160,7 +160,7 @@ body {
       }
     }
   }
-  &__cta{
+  &__cta {
     margin: 7px 0 0 0;
     padding: 12px 46px 12px 46px;
     font-size: 14px;
@@ -169,10 +169,6 @@ body {
     border: none;
     border-radius: 100px;
     box-shadow: 0px 5px 15px -8px $dark-gray;
-    transition: all 0.5 ease-in-out;
-    &:hover{
-      transform: scale(1.1);
-    }
   }
 }
 

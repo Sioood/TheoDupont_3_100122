@@ -50,6 +50,8 @@ h2 {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  font-family: "Shrikhand", cursive;
+  font-size: 25px;
   -webkit-box-shadow: 0px -5px 10px #353535;
           box-shadow: 0px -5px 10px #353535;
   z-index: 1;
@@ -57,22 +59,23 @@ h2 {
 
 .nav__logo__back {
   position: absolute;
-  top: 50%;
-  left: 0;
+  left: 5%;
   width: auto;
-  height: auto;
-  -webkit-transform: translate(0, -50%);
-          transform: translate(0, -50%);
+  height: 20%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .nav__logo__back img {
-  width: 50px !important;
-  height: 15px !important;
-}
-
-.nav__logo img {
-  width: auto;
-  height: 25px;
+  width: 100%;
+  height: 100%;
 }
 
 .nav__loc {
@@ -88,8 +91,14 @@ h2 {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  gap: 10px;
   background: #eaeaea;
   color: #353535;
+}
+
+.nav__loc img {
+  width: 15px;
+  height: 15px;
 }
 
 footer {
@@ -143,8 +152,19 @@ footer a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   font-size: 12px;
+  font-weight: 500;
   color: white;
+  gap: 10px;
+}
+
+footer h4 img,
+footer a img {
+  width: auto;
+  height: 12px;
 }
 
 footer .footer__thin {
@@ -234,13 +254,20 @@ footer .footer__thin {
   }
   .nav__logo {
     padding: 2%;
+    font-size: 50px;
     background: white;
-  }
-  .nav__logo img {
-    height: 50px;
   }
   .nav__loc {
     font-size: 20px;
+  }
+  .cta {
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+  }
+  .cta:hover {
+    -webkit-transform: scale(1.02);
+            transform: scale(1.02);
+    background: linear-gradient(-15deg, #9356dc, #ff79da);
   }
   footer ul {
     -webkit-box-orient: horizontal;
