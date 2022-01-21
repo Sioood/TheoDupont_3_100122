@@ -1,11 +1,7 @@
 .hearth {
   width: 20px;
   height: 20px;
-<<<<<<< HEAD
-  background: center/contain no-repeat url("./assets/svg/hearth-stroke.svg");
-=======
   background: center/contain no-repeat url("/assets/svg/hearth-stroke.svg");
->>>>>>> animation
   cursor: pointer;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;

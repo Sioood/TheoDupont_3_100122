@@ -13,8 +13,7 @@ $second-font: "Roboto", sans-serif;
 .hearth {
   width: 20px;
   height: 20px;
-  background: center / contain no-repeat
-    url("/assets/svg/hearth-stroke.svg");
+  background: center / contain no-repeat url("/assets/svg/hearth-stroke.svg");
   cursor: pointer;
   transition: all 0.3s ease-in-out;
   &:hover {
@@ -83,12 +82,12 @@ $second-font: "Roboto", sans-serif;
     background: $light-gray;
     border-radius: 10px;
     box-shadow: 0px 5px 15px #d9d9d9;
-    img{
+    img {
       margin: 0 15px 0 0;
       width: auto;
       height: 25%;
     }
-    h5{
+    h5 {
       z-index: 1;
     }
     &::before {
@@ -188,7 +187,7 @@ $second-font: "Roboto", sans-serif;
           font-weight: 300;
         }
       }
-      .hearth{
+      .hearth {
         padding: 0 30px 0 0;
       }
     }
@@ -202,7 +201,7 @@ $second-font: "Roboto", sans-serif;
   }
 
   .presentation {
-    h1{
+    h1 {
       padding: 0;
       width: 100%;
       font-size: 2vw;
