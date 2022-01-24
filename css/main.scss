@@ -34,7 +34,7 @@ h2 {
   width: 100%;
   display: flex;
   flex-direction: column;
-  align-items: left;
+  align-items: flex-start;
   justify-content: center;
 
   &__logo {
@@ -84,13 +84,13 @@ footer {
   padding: 20px;
   display: flex;
   flex-direction: column;
-  align-items: left;
+  align-items: flex-start;
   justify-content: center;
   background: $dark-gray;
   ul {
     display: flex;
     flex-direction: column;
-    align-items: left;
+    align-items: flex-start;
     justify-content: center;
     gap: 5px;
 
@@ -179,7 +179,7 @@ footer {
   }
 
   .nav {
-    align-items: left;
+    align-items: flex-start;
     justify-content: left;
     &__logo {
       padding: 2%;
@@ -201,12 +201,14 @@ footer {
 
   footer {
     ul {
+      width: 100%;
       flex-direction: row;
       align-items: center;
       justify-content: space-around;
-      h4 {
+      .footer__title{
         padding: 0;
         margin: 0;
+        font-family: $first-font;
         font-size: 22px;
       }
       a {
