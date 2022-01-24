@@ -31,7 +31,6 @@ body {
   border-radius: 35px 35px 0 0;
   transform: translate(0, -45px);
   &__title {
-    margin: 0 0 35px 0;
     width: 100%;
     display: flex;
     align-items: center;
@@ -59,7 +58,7 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 40px;
+    gap: 35px;
     &__categorie {
       width: 100%;
       &__title {
@@ -161,7 +160,7 @@ body {
     }
   }
   &__cta {
-    margin: 7px 0 0 0;
+    margin: 15px 0 0 0;
     padding: 12px 46px 12px 46px;
     font-size: 14px;
     background: linear-gradient(-10deg, $primary-color, $secondary-color);
@@ -174,9 +173,12 @@ body {
 
 @media screen and (min-width: 1024px) {
   .menu {
-    h1 {
-      font-family: $first-font;
-      font-weight: 100;
+    &__title{
+      margin: 0 0 35px 0;
+      h1 {
+        font-family: $first-font;
+        font-weight: 100;
+      }
     }
     &__list {
       display: flex;

@@ -369,6 +369,9 @@ footer .footer__thin {
     font-size: 50px;
     background: white;
   }
+  .nav__logo__back {
+    left: 3%;
+  }
   .nav__loc {
     font-size: 20px;
   }

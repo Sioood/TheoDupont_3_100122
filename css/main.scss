@@ -249,6 +249,9 @@ footer {
       padding: 2%;
       font-size: 50px;
       background: $light-color;
+      &__back{
+        left: 3%;
+      }
     }
     &__loc {
       font-size: 20px;
