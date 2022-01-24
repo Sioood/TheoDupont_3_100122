@@ -28,8 +28,8 @@ body {
 
 .loader {
   position: fixed;
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
   background: $light-color;
   z-index: 2;
   animation: loader 2.5s linear forwards;
@@ -38,7 +38,7 @@ body {
     position: absolute;
     top: 50%;
     left: 50%;
-    width: 300px;
+    width: 25vw;
     height: auto;
     display: flex;
     align-items: center;
@@ -201,13 +201,13 @@ footer {
 //animation appear on loading
 
 .appear__element {
-  $cards: 3;
+  $appear-element: 4;
   $anim-dur: 1s;
-  $anim-delay: $anim-dur / $cards;
+  $anim-delay: $anim-dur / $appear-element;
 
   opacity: 0;
   animation: appear $anim-dur ease-in-out forwards;
-  @for $i from 1 through $cards {
+  @for $i from 1 through $appear-element {
     &--#{$i} {
       animation-delay: $anim-delay * $i;
     }
