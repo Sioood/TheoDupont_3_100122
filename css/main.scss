@@ -261,6 +261,7 @@ footer {
   .cta {
     transition: all 0.2s ease-in-out;
     &:hover {
+      font-weight: 500;
       transform: scale(1.02);
       background: linear-gradient(-15deg, $primary-color, $secondary-color);
     }
