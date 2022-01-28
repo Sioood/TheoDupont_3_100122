@@ -139,7 +139,6 @@ body {
             display: flex;
             flex-direction: column;
             justify-content: space-around;
-            gap: 5px;
             h5,
             h6 {
               white-space: nowrap;
@@ -147,7 +146,7 @@ body {
               overflow: hidden;
             }
             h5 {
-              padding: 10px 0 0 0;
+              padding: 10px 0 5px 0;
               font-weight: 600;
             }
             h6 {

@@ -210,7 +210,6 @@ body {
           flex-direction: column;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  gap: 5px;
 }
 
 .menu__list__categorie__cards__card__info h5,
@@ -221,7 +220,7 @@ body {
 }
 
 .menu__list__categorie__cards__card__info h5 {
-  padding: 10px 0 0 0;
+  padding: 10px 0 5px 0;
   font-weight: 600;
 }
 

@@ -70,10 +70,13 @@ $second-font: "Roboto", sans-serif;
     width: 90%;
   }
   &__step {
+    $height--step: 60px;
+    $calc--step: $height--step * 0.25;
+
     position: relative;
     margin: 0 2.5% 0 2.5%;
     width: 85%;
-    height: 60px;
+    height: $height--step;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -86,6 +89,21 @@ $second-font: "Roboto", sans-serif;
     img {
       width: auto;
       height: 25%;
+    }
+    &__img {
+      margin: 0 15px 0 0;
+      width: $calc--step;
+      height: $calc--step;
+      &--1 {
+        background: center / contain no-repeat url("../assets/svg/phone.svg");
+      }
+      &--2 {
+        background: center / contain no-repeat url("../assets/svg/list.svg");
+      }
+      &--3 {
+        background: center / contain no-repeat
+          url("../assets/svg/restaurant.svg");
+      }
     }
     h5 {
       z-index: 1;
@@ -118,6 +136,18 @@ $second-font: "Roboto", sans-serif;
     }
     &:hover::after {
       opacity: 0.1;
+    }
+
+    &:hover &__img--1 {
+      background: center / contain no-repeat url("../assets/svg/phone--purple.svg");
+    }
+
+    &:hover &__img--2 {
+      background: center / contain no-repeat url("../assets/svg/list--purple.svg");
+    }
+
+    &:hover &__img--3 {
+      background: center / contain no-repeat url("../assets/svg/restaurant--purple.svg");
     }
   }
 }
@@ -226,45 +256,49 @@ $second-font: "Roboto", sans-serif;
       width: 75%;
     }
     &__step {
-      height: 75px;
+      $height--step: 75px;
+      $calc--step: $height--step * 0.25;
+
+      height: $height--step;
       gap: 15px;
       background: $light-color;
-      img {
-        margin: 0 15px 0 0;
+      &__img {
+        width: $calc--step;
+        height: $calc--step;
       }
-      h5 {
-        font-size: 18px;
-      }
-      &::before {
-        width: 30px;
-        height: 30px;
-        font-size: 90%;
-      }
+    }
+    h5 {
+      font-size: 18px;
+    }
+    &::before {
+      width: 30px;
+      height: 30px;
+      font-size: 90%;
     }
   }
-  .list {
-    background: none;
-    &__wrapper {
-      gap: 55px;
+}
+.list {
+  background: none;
+  &__wrapper {
+    gap: 55px;
+  }
+  &__card {
+    height: 400px;
+    &__new::after {
+      font-size: 16px;
     }
-    &__card {
-      height: 400px;
-      &__new::after {
-        font-size: 16px;
-      }
-      &__info {
-        padding: 0 15px 0 25px;
-        height: 30%;
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-between;
-        &__text {
-          font-size: 20px;
-          gap: 15px;
-          &__pos {
-            font-size: 18px;
-          }
+    &__info {
+      padding: 0 15px 0 25px;
+      height: 30%;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      &__text {
+        font-size: 20px;
+        gap: 15px;
+        &__pos {
+          font-size: 18px;
         }
       }
     }

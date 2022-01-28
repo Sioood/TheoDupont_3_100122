@@ -225,6 +225,18 @@ h2 {
   height: 15px;
 }
 
+.cta {
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+.cta:hover {
+  font-weight: 500;
+  -webkit-transform: scale(1.02);
+          transform: scale(1.02);
+  background: linear-gradient(-15deg, #9356dc, #ff79da);
+}
+
 footer {
   padding: 20px;
   display: -webkit-box;
@@ -374,16 +386,6 @@ footer .footer__thin {
   }
   .nav__loc {
     font-size: 20px;
-  }
-  .cta {
-    -webkit-transition: all 0.2s ease-in-out;
-    transition: all 0.2s ease-in-out;
-  }
-  .cta:hover {
-    font-weight: 500;
-    -webkit-transform: scale(1.02);
-            transform: scale(1.02);
-    background: linear-gradient(-15deg, #9356dc, #ff79da);
   }
   footer ul {
     width: 100%;
