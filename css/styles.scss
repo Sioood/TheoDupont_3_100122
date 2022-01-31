@@ -139,15 +139,18 @@ $second-font: "Roboto", sans-serif;
     }
 
     &:hover &__img--1 {
-      background: center / contain no-repeat url("../assets/svg/phone--purple.svg");
+      background: center / contain no-repeat
+        url("../assets/svg/phone--purple.svg");
     }
 
     &:hover &__img--2 {
-      background: center / contain no-repeat url("../assets/svg/list--purple.svg");
+      background: center / contain no-repeat
+        url("../assets/svg/list--purple.svg");
     }
 
     &:hover &__img--3 {
-      background: center / contain no-repeat url("../assets/svg/restaurant--purple.svg");
+      background: center / contain no-repeat
+        url("../assets/svg/restaurant--purple.svg");
     }
   }
 }
@@ -276,29 +279,29 @@ $second-font: "Roboto", sans-serif;
       font-size: 90%;
     }
   }
-}
-.list {
-  background: none;
-  &__wrapper {
-    gap: 55px;
-  }
-  &__card {
-    height: 400px;
-    &__new::after {
-      font-size: 16px;
+  .list {
+    background: none;
+    &__wrapper {
+      gap: 55px;
     }
-    &__info {
-      padding: 0 15px 0 25px;
-      height: 30%;
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      justify-content: space-between;
-      &__text {
-        font-size: 20px;
-        gap: 15px;
-        &__pos {
-          font-size: 18px;
+    &__card {
+      height: 400px;
+      &__new::after {
+        font-size: 16px;
+      }
+      &__info {
+        padding: 0 15px 0 25px;
+        height: 30%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        &__text {
+          font-size: 20px;
+          gap: 15px;
+          &__pos {
+            font-size: 18px;
+          }
         }
       }
     }
