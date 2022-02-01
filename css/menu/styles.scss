@@ -45,7 +45,7 @@ body {
       background: center / contain no-repeat
         url("../../assets/svg/hearth-stroke.svg");
       cursor: pointer;
-      transition: all 0.3s ease-in-out;
+      transition: all 0.5s ease-in;
       &:hover {
         background: center / contain no-repeat
           url("../../assets/svg/hearth.svg");
@@ -172,11 +172,15 @@ body {
 
 @media screen and (min-width: 1024px) {
   .menu {
-    &__title{
+    &__title {
       margin: 0 0 35px 0;
       h1 {
         font-family: $first-font;
         font-weight: 100;
+      }
+      .hearth {
+        width: 30px;
+        height: 30px;
       }
     }
     &__list {

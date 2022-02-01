@@ -1,10 +1,15 @@
 .hearth {
+  position: absolute;
+  bottom: 15%;
+  right: 15px;
+  -webkit-transform: translate(0%, 50%);
+          transform: translate(0%, 50%);
   width: 20px;
   height: 20px;
   background: center/contain no-repeat url("../assets/svg/hearth-stroke.svg");
   cursor: pointer;
-  -webkit-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.5s ease-in;
+  transition: all 0.5s ease-in;
 }
 
 .hearth:hover {
@@ -215,11 +220,12 @@
   background: #f6f6f6;
 }
 
-.list > h2, .list__wrapper {
+.list h2 {
   width: 90%;
 }
 
 .list__wrapper {
+  width: 90%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -236,6 +242,20 @@
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   gap: 20px;
+}
+
+.list__wrapper__container {
+  position: relative;
+  min-width: 40%;
+  height: 215px;
+  color: #353535;
+  overflow: hidden;
+  border-radius: 15px;
+  -webkit-box-shadow: 0px 5px 30px -20px #353535;
+          box-shadow: 0px 5px 30px -20px #353535;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 400px;
+          flex: 1 1 400px;
 }
 
 .list__card {
@@ -317,6 +337,11 @@
 }
 
 @media screen and (min-width: 1024px) {
+  .hearth {
+    right: 25px;
+    width: 30px;
+    height: 30px;
+  }
   .info {
     height: 60vh;
     -webkit-box-orient: horizontal;
@@ -370,6 +395,9 @@
   .list__wrapper {
     gap: 55px;
   }
+  .list__wrapper__container {
+    height: 400px;
+  }
   .list__card {
     height: 400px;
   }
@@ -377,7 +405,7 @@
     font-size: 16px;
   }
   .list__card__info {
-    padding: 0 15px 0 25px;
+    padding: 0 25px 0 25px;
     height: 30%;
     display: -webkit-box;
     display: -ms-flexbox;
